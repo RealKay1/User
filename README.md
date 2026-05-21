@@ -1,4 +1,4 @@
-# README — SQL-Based Statistical Analysis for Section 2.3.3
+# SQL-Based Statistical Analysis for Section 2.3.3
 
 **Thesis:** AI-Driven Digital Marketing Strategy for Kartpos UAB (African Market)
 **Institution:** Vilniaus Kolegija (VIKO)
