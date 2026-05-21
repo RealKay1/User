@@ -1,8 +1,9 @@
 # SQL-Based Statistical Analysis for Section 2.3.3
 
-**Thesis:** AI-Driven Digital Marketing Strategy for Kartpos UAB (African Market)
+**Thesis:** Developing AI-Driven Digital Marketing for UAB “Kartpos”(African Market)
 **Institution:** Vilniaus Kolegija (VIKO)
-**Database engine:** PostgreSQL 15+ (executed via pgAdmin 4)
+**Database engine:** PostgreSQL 18+ (executed via pgAdmin 4)
+**Development Environment:** Visual Studio Code (VS Code)
 **Companion file:** `thesis_block_c_queries.sql`
 **Source dataset:** `african_market_survey.sql` (194 cleaned customer-survey responses)
 
