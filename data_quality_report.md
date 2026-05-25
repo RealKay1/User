@@ -1,6 +1,7 @@
 # Data Quality Report — African Market Customer Survey
 
 **Generated:** 2026-05-21 09:32:43  
+**Author:** Omokolade Solomon Opeibi
 **Source:** Google Forms export, raw_survey.csv  
 **Purpose:** Customer survey data for VIKO graduation thesis on AI-driven digital marketing for Kartpos UAB (African Market, africanmarket.lt)
 
