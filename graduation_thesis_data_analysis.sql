@@ -2,7 +2,7 @@
 -- ============================================================================
 -- THESIS BLOCK C — STATISTICAL REPRODUCTION QUERIES (PostgreSQL / pgAdmin)
 -- ============================================================================
--- Author:   Klutch — VIKO graduation thesis on AI-driven digital marketing
+-- Author:   Omokolade Solomon Opeibi — VIKO graduation thesis on AI-driven digital marketing
 -- Subject:  Kartpos UAB (African Market, africanmarket.lt)
 -- Source:   `survey_responses` table loaded from african_market_survey.sql
 --
