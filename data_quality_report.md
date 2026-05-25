@@ -1,4 +1,4 @@
-# Data Quality Report — African Market Customer Survey
+# Data Quality Report - African Market Customer Survey
 
 **Generated:** 2026-05-21 09:32:43  
 **Author:** Omokolade Solomon Opeibi
