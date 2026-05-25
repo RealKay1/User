@@ -2,6 +2,7 @@
 
 **Thesis:** Developing AI-Driven Digital Marketing for UAB “Kartpos”(African Market)
 **Institution:** Vilniaus Kolegija (VIKO)
+**Author:** Omokolade Solomon Opeibi
 **Database engine:** PostgreSQL 18+ (executed via pgAdmin 4)
 **Development Environment:** Visual Studio Code (VS Code)
 **Companion file:** `thesis_block_c_queries.sql`
