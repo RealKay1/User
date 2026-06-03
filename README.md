@@ -12,7 +12,7 @@
 
 ## 1. Purpose and Scope
 
-This document explains the SQL-based reproduction of the empirical findings reported in **Section 2.3.3 (Acceptance of AI-Powered Marketing Features)** of the thesis, including the statistics summarised in **Table 2.7**. Its purpose is twofold: to provide a clear, non-specialist account of how the analysis was performed directly against the survey database, and to demonstrate that every reported statistic — means, standard deviations, agreement percentages, subgroup comparisons, and the Cronbach's alpha reliability coefficient — is independently reproducible from the underlying data using standard SQL.
+This document explains the SQL-based reproduction of the empirical findings reported in **Section 2.3.3 (Acceptance of AI-Powered Marketing Features)** of the thesis, including the statistics summarised in **Table 2.7**. Its purpose is twofold: to provide a clear, non-specialist account of how the analysis was performed directly against the survey database, and to demonstrate that every reported statistic - means, standard deviations, agreement percentages, subgroup comparisons, and the Cronbach's alpha reliability coefficient - is independently reproducible from the underlying data using standard SQL.
 
 The companion file `thesis_block_c_queries.sql` contains the full set of queries. This README walks through their logic and links each output to the corresponding interpretation in the thesis text.
 
