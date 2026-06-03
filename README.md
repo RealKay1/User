@@ -32,11 +32,11 @@ Table 2.7 presents three statistics per Q11 item, each capturing a different fac
 
 The **mean** (`AVG`) summarises the central tendency of responses on the 1–5 Likert scale, where 3.00 represents the scale midpoint (the "neither agree nor disagree" position). Means above 3.00 indicate net-positive endorsement; means below indicate net-negative disposition.
 
-The **standard deviation** (`STDDEV_SAMP`) measures dispersion around the mean. In Table 2.7, all five items return standard deviations between 1.21 and 1.36, indicating consistent and moderate disagreement across respondents — neither uniform consensus nor extreme polarisation.
+The **standard deviation** (`STDDEV_SAMP`) measures dispersion around the mean. In Table 2.7, all five items return standard deviations between 1.21 and 1.36, indicating consistent and moderate disagreement across respondents - neither uniform consensus nor extreme polarisation.
 
 The **percentage of agreement** (% Agree / Strongly Agree) reports the proportion of respondents who selected 4 or 5 on the Likert scale. This complements the mean by showing how much of the distribution sits in the actively favourable region, rather than merely above the midpoint.
 
-The substantive interpretation reported in the thesis follows directly from these numbers. Automated notifications (M = 3.40, 49.6 % agreement) and personalised recommendations (M = 3.24, 42.2 % agreement) emerge as the most accepted feature categories, both meaningfully above the midpoint. Chatbot interaction (M = 3.17) sits in moderate territory. AI-generated recipes (M = 2.90) and trust in AI-generated content (M = 2.88) fall just below the midpoint, indicating mild hesitancy rather than outright rejection. The 0.52-point spread between the highest and lowest items signals that respondents differentiate between feature types rather than adopting a uniform attitude towards AI — a finding consistent with Musa et al. (2024).
+The substantive interpretation reported in the thesis follows directly from these numbers. Automated notifications (M = 3.40, 49.6 % agreement) and personalised recommendations (M = 3.24, 42.2 % agreement) emerge as the most accepted feature categories, both meaningfully above the midpoint. Chatbot interaction (M = 3.17) sits in moderate territory. AI-generated recipes (M = 2.90) and trust in AI-generated content (M = 2.88) fall just below the midpoint, indicating mild hesitancy rather than outright rejection. The 0.52-point spread between the highest and lowest items signals that respondents differentiate between feature types rather than adopting a uniform attitude towards AI - a finding consistent with Musa et al. (2024).
 
 The Cronbach's alpha of **0.78** confirms acceptable internal consistency for the five-item TAM scale (Saunders et al., 2023; threshold ≥ 0.70), which justifies treating the items as measures of a single underlying construct (overall AI feature acceptance) while preserving the value of item-level analysis.
 
@@ -48,7 +48,7 @@ Once the cleaned survey dataset was loaded into a PostgreSQL table (`survey_resp
 
 First, the queries are **declarative**: they specify *what* is to be computed, not *how*, so a reader unfamiliar with the underlying procedural code can still follow the logic. Second, every statistic is **traceable to a specific row of the database** — a supervisor can rerun any query and obtain identical results without intermediate manual steps. Third, the use of standard SQL functions (`AVG`, `STDDEV_SAMP`, `VAR_SAMP`, `COUNT`) avoids any dependence on proprietary software, which makes the analysis portable across institutions.
 
-The PostgreSQL aggregate functions used here apply the **sample-based** divisor (n−1) for variance and standard deviation, which is the convention used in SPSS, Stata, and R, and is appropriate when the sample is treated as drawn from a larger population — as it is in this study.
+The PostgreSQL aggregate functions used here apply the **sample-based** divisor (n−1) for variance and standard deviation, which is the convention used in SPSS, Stata, and R, and is appropriate when the sample is treated as drawn from a larger population - as it is in this study.
 
 ---
 
@@ -141,7 +141,7 @@ GROUP BY item_code
 ORDER BY item_code;
 ```
 
-This conditional-aggregation pattern — `AVG(CASE WHEN ... THEN rating END)` — is the SQL equivalent of computing a mean over a filtered subset, but performed within a single pass over the data. The result confirms the thesis claim that African respondents report higher acceptance on every TAM item, while the trust item shows one of the smallest between-group gaps. The familiarity-based subgroup analysis similarly confirms that regular customers report notably higher acceptance on every item (deltas ranging from +0.32 to +0.61), which supports the interpretation that prior contact with the brand correlates with greater openness to AI-mediated engagement.
+This conditional-aggregation pattern — `AVG(CASE WHEN ... THEN rating END)` - is the SQL equivalent of computing a mean over a filtered subset, but performed within a single pass over the data. The result confirms the thesis claim that African respondents report higher acceptance on every TAM item, while the trust item shows one of the smallest between-group gaps. The familiarity-based subgroup analysis similarly confirms that regular customers report notably higher acceptance on every item (deltas ranging from +0.32 to +0.61), which supports the interpretation that prior contact with the brand correlates with greater openness to AI-mediated engagement.
 
 ### 5.5 Q12 Multi-Select Feature Ranking (Section 5)
 
@@ -186,7 +186,7 @@ To reproduce the analysis end-to-end, a reader executes the queries in `thesis_b
 
 Two small numerical discrepancies exist between the values produced by the queries and the values reported in the thesis text. The listwise-complete sample yields n = 141 on the cleaned dataset, whereas the thesis reports n = 143; the Q12 sample yields n = 154 whereas the thesis reports n = 156. Both differences correspond exactly to the two duplicate submissions identified and removed during data cleaning after the thesis chapter was drafted. The resulting changes in derived statistics are within rounding tolerance: item means differ by at most 0.02, and Cronbach's alpha rounds to 0.77 on the cleaned data versus 0.78 in the thesis text. None of the substantive interpretations are affected, and the cleaning rationale is documented in the accompanying `data_quality_report.md`.
 
-A reader running the queries today will therefore obtain results that align closely — but not identically — with the values printed in the thesis. The methodological position is that the cleaned dataset is the more defensible analytical base, and the two-respondent reduction has no bearing on any conclusion drawn in Section 2.3.3.
+A reader running the queries today will therefore obtain results that align closely - but not identically - with the values printed in the thesis. The methodological position is that the cleaned dataset is the more defensible analytical base, and the two-respondent reduction has no bearing on any conclusion drawn in Section 2.3.3.
 
 ---
 
